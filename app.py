@@ -39,13 +39,16 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    s = '要不要來買便當?'
     r = '你說甚麼我看不懂XD'
 
-    if msg == 'hi':
-        r = 'hi'
-    elif msg == '我想買便當':
+    if msg == ['hi', 'hi', '嗨']:
+        r = '嗨，要不要來買便當?'
+    elif msg == '我要點餐':
         r = '菜單請看大頭貼，謝謝'
+    elif msg == '一個雞腿飯':
+        r = '內用還是外帶?'
+    elif msg == '可以外送嗎?':
+        r = '你是沒有腿走過來嗎?'
 
     line_bot_api.reply_message(
         event.reply_token,
