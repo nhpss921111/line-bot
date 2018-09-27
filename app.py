@@ -41,7 +41,7 @@ def handle_message(event):
     msg = event.message.text
     r = '你說甚麼我看不懂XD'
 
-    if msg == ['hi', 'hi', '嗨']:
+    if msg in ['hi', 'Hi', '嗨']:
         r = '嗨，要不要來買便當?'
     elif msg == '我要點餐':
         r = '菜單請看大頭貼，謝謝'
