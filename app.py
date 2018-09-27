@@ -38,7 +38,6 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    print('嗨，我是新來的服務生' )
     msg = event.message.text
     r = '你說甚麼我看不懂XD'
 
@@ -53,6 +52,8 @@ def handle_message(event):
 
     if msg in ['hi', 'Hi', '嗨','你好']:
         r = '嗨，要不要來買便當？'
+    elif msg in '你是誰':
+        r = '嗨，我是新來的服務生'
     elif '點餐' in msg:
         r = '菜單請看大頭貼，謝謝'
     elif '好' in msg:
