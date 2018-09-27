@@ -38,6 +38,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    print('嗨，我是新來的服務生' )
     msg = event.message.text
     r = '你說甚麼我看不懂XD'
 
