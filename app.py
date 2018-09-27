@@ -40,6 +40,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     s = '要不要來買便當?'
+    r = '你說甚麼我看不懂XD'
 
     if msg == 'hi':
         r = 'hi'
