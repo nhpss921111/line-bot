@@ -40,9 +40,15 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     s = '要不要來買便當?'
+
+    if msg == 'hi':
+        r = 'hi'
+    elif msg == '我想買便當':
+        r = '菜單請看大頭貼，謝謝'
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
