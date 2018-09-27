@@ -52,12 +52,18 @@ def handle_message(event):
 
     if msg in ['hi', 'Hi', '嗨','你好']:
         r = '嗨，要不要來買便當？'
-    elif msg == '我要點餐':
+    elif msg in['點餐', '好']:
         r = '菜單請看大頭貼，謝謝'
     elif '飯' in msg:
         r = '內用還是外帶？'
+    elif '內用' in msg:
+        r = '有位子都可以坐喔！'
+    elif '外帶' in msg:
+        r = '要幾點來拿？'
     elif msg == '可以外送嗎？':
         r = '不好意思，現在人手不足無法外送！'
+    elif msg in ['掰', '8']:
+        r = '謝謝你的光臨，歡迎下次再來！'
 
     line_bot_api.reply_message(
         event.reply_token,
