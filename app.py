@@ -45,9 +45,9 @@ def handle_message(event):
         r = '嗨，要不要來買便當?'
     elif msg == '我要點餐':
         r = '菜單請看大頭貼，謝謝'
-    elif msg == '一個雞腿飯':
-        r = '內用還是外帶?'
-    elif msg == '可以外送嗎?':
+    elif msg == '我要一個雞腿飯':
+        r = '內用還是外帶？'
+    elif msg == '可以外送嗎？':
         r = '你是沒有腿走過來嗎?'
 
     line_bot_api.reply_message(
